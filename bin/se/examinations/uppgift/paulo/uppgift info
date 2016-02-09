@@ -1,0 +1,97 @@
+Kompletteringsuppgift - Ett annat kortspel
+Uppgiften går ut på att ta fram ett Memory-spel i Java med 
+objektorienterad programmering. Spelet ska spelas i terminalen/konsollen/kommandoprompten. 
+
+Memory
+Spelet Memory går ut på att man ska para ihop likadana kort. 
+Ett antal kort, där hälften är dubletter, ligger med baksidan upp på ett bord. 
+Spelaren vänder sedan på två kort och om dessa matchar varandra får spelaren poäng och 
+korten plockas bort. Om korten inte är likadana vänds korten tillbaka med baksidan upp. 
+Spelet slutar när alla kort är borta.
+
+Exempel på utskrift 
+Vad heter du? 
+> Jonas
+
+Bordet:
+[ 1 ] [ 2 ] [ 3 ] [ 4 ] [ 5 ] [ 6 ] [ 7 ] [ 8 ]
+
+Välj ett kort:
+> 1
+[ A ] [ 2 ] [ 3 ] [ 4 ] [ 5 ] [ 6 ] [ 7 ] [ 8 ]
+Välj ett till kort:
+> 5
+[ A ] [ 2 ] [ 3 ] [ 4 ] [ D ] [ 6 ] [ 7 ] [ 8 ]
+
+Korten är inte likadana.
+Jonas: 0 poäng
+
+Bordet:
+[ 1 ] [ 2 ] [ 3 ] [ 4 ] [ 5 ] [ 6 ] [ 7 ] [ 8 ]
+
+Välj ett kort:
+> 1
+[ A ] [ 2 ] [ 3 ] [ 4 ] [ 5 ] [ 6 ] [ 7 ] [ 8 ]
+Välj ett till kort:
+> 7
+[ A ] [ 2 ] [ 3 ] [ 4 ] [ 5 ] [ 6 ] [ A ] [ 8 ]
+
+Korten är likadana.
+Jonas: 1 poäng
+
+Bordet:
+      [ 2 ] [ 3 ] [ 4 ] [ 5 ] [ 6 ]       [ 8 ]
+
+Välj ett kort:
+> 3
+      [ 2 ] [ B ] [ 4 ] [ 5 ] [ 6 ]       [ 8 ]
+Välj ett till kort:
+> 5
+      [ 2 ] [ 3 ] [ 4 ] [ C ] [ 6 ]       [ 8 ]
+
+Korten är inte likadana.
+Jonas: 1 poäng
+...
+
+Krav
+Gemensamma krav
+Spelet använder sig av klasser och objekt för spelare och kort.
+Namn på spelare ska matas in.
+Kortens placering på bordet ska vara slumpmässig. 
+I utskriften ska det framgå hur man väljer ett visst kort, kortets framsida när man valt det och vilka kort som finns kvar/är bortplockade.
+Efter varje tur (när man valt två kort) ska spelarens poäng skrivas ut.
+
+För Godkänt
+Spelet har 8 kort (varav 4 är dubletter) som visas på en rad.
+Spelet spelas av en spelare.
+
+För väl godkänt
+Spelet har 16 kort (varav 8 är dubletter) som visas i ett rutnät:
+[ 1  ] [ 2  ] [ 3  ] [ 4  ]
+[ 5  ] [ 6  ] [ 7  ] [ 8  ]
+[ 9  ] [ 10 ] [ 11 ] [ 12 ]
+[ 13 ] [ 14 ] [ 15 ] [ 16 ]
+Spelet spelas mellan två spelare som turas om att välja två kort. 
+Spelet börjar om och fortsätter tills spelaren avslutar det, spelarna behåller sina poäng till nästa spel.
+Felaktig inmatning hanteras av spelet.
+
+Valfritt
+Du får själv välja vad som ska stå på kortens framsida. Det kan vara bokstäver från alfabetet (A, B, C o.s.v...), spelkort (h4, sK, c8, dA, o.s.v.) eller något annat inom ett tema du bestämmer.
+Du får själv välja hur utskriften ska se ut så länge kraven ovan är uppfyllda.
+
+Tips
+För att rensa terminalen och göra det svårare att gå tillbaka och se vad varje kort var när man spelare, pröva någon av följande rader:
+System.out.print("\033[H\033[2J"); 
+System.out.print('\u000C');
+
+Redovisning
+Redovisningen är individuell och muntlig. Du demonstrerar spelet och svarar på frågor om din kod för att visa din förståelse för objektorienterad programmering. Meddela när du är redo att redovisa så får du 15 min på ett av Android-passen att redovisa på.  Under redovisningen ska du även redogöra för eventuella källor du fått hjälp ifrån.
+
+Betygsbedömning
+Godkänt
+Spelet uppfyller kraven för godkänt. 
+Du visar under redovisningen förståelse för grunderna i programmering och objektorienterad programmering.
+
+Väl godkänt
+Spelet uppfylller kraven för väl godkänt
+Du visar under redovisningen på en djupare förståelse för programmering och kunskaper om hur objektorienterad programmering fungerar.
